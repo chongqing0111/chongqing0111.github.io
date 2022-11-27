@@ -4,20 +4,19 @@
   font-style: normal;
   -webkit-font-smoothing:antialiased
 }
-#nav .menus_items {
+/* #nav .menus_items {
   color: #ffffff !important;
-}
+} */
 
 
 /* 一图流效果start */
 /* 页脚与头图透明 */
-/* #footer {
+ #footer {
   background: transparent !important;
 }
-#page-header {
+/*#page-header {
   background: transparent !important;
 } */
-
 /* 白天模式遮罩透明 */
 /* #footer::before {
   background: transparent !important;
@@ -25,7 +24,6 @@
 #page-header::before {
   background: transparent !important;
 } */
-
 /* 夜间模式遮罩透明 */
 /* [data-theme="dark"] #footer::before {
   background: transparent !important;
@@ -33,7 +31,6 @@
 [data-theme="dark"] #page-header::before {
   background: transparent !important;
 } */
-
 /* 一图流效果end */
 
 
@@ -66,18 +63,7 @@
 
 
 
-/* 深夜霓虹灯start */
-/* 夜间模式菜单栏发光字 */
-[data-theme="dark"] #nav .site-page,
-[data-theme="dark"] #nav .menus_items .menus_item .menus_item_child li a {
-  text-shadow: 0 0 2px var(--theme-color) !important;
-}
 
-/* 手机端适配 */
-[data-theme="dark"] #sidebar #sidebar-menus .menus_items .site-page {
-  text-shadow: 0 0 2px var(--theme-color) !important;
-}
-/* 深夜霓虹灯end */
 
 
 
@@ -144,6 +130,7 @@
 /* 个人卡片渐变色end */
 
 
+/* 调节各个页面透明度、模糊度（亚克力效果）、圆角、边框样式等，看起来会更加舒适start */
 :root {
   --trans-light: rgba(255, 255, 255, 0.88);
   --trans-dark: rgba(25, 25, 25, 0.88);
@@ -155,7 +142,6 @@
   background: rgba(255, 255, 255, 0.75);
   backdrop-filter: var(--backdrop-filter);
 }
-
 [data-theme="dark"] #page-header.nav-fixed #nav {
   background: rgba(0, 0, 0, 0.7) !important;
 }
@@ -167,8 +153,6 @@
 [data-theme="dark"] div#page {
   background: var(--trans-dark);
 }
-
-
 /* 夜间模式页脚页头遮罩透明 */
 [data-theme="dark"] #footer::before {
   background: transparent !important;
@@ -176,7 +160,6 @@
 [data-theme="dark"] #page-header::before {
   background: transparent !important;
 }
-
 /* 阅读模式 */
 .read-mode #aside-content .card-widget {
   background: rgba(158, 204, 171, 0.5) !important;
@@ -184,7 +167,6 @@
 .read-mode div#post {
   background: rgba(158, 204, 171, 0.5) !important;
 }
-
 /* 夜间模式下的阅读模式 */
 [data-theme="dark"] .read-mode #aside-content .card-widget {
   background: rgba(25, 25, 25, 0.9) !important;
@@ -194,6 +176,7 @@
   background: rgba(25, 25, 25, 0.9) !important;
   color: #ffffff;
 }
+/* 调节各个页面透明度、模糊度（亚克力效果）、圆角、边框样式等，看起来会更加舒适end */
 
 
 /* 风车转动效果start */
@@ -286,3 +269,16 @@ h6::before {
   animation: ccc 6s linear infinite;
 }
 /* 风车转动效果end */
+
+/* 深夜霓虹灯start */
+/* 夜间模式菜单栏发光字 */
+[data-theme="dark"] #nav .site-page,
+[data-theme="dark"] #nav .menus_items .menus_item .menus_item_child li a {
+  text-shadow: 0 0 2px var(--theme-color) !important;
+}
+
+/* 手机端适配 */
+[data-theme="dark"] #sidebar #sidebar-menus .menus_items .site-page {
+  text-shadow: 0 0 2px var(--theme-color) !important;
+}
+/* 深夜霓虹灯end */

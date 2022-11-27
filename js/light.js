@@ -45,5 +45,5 @@ function changeColor () {
   }
 }
 
-// 开启计时器  调节闪烁周期，默认为 1200ms
+// 开启计时器// 开启计时器  调节闪烁周期，默认为 1200ms
 window.onload = setInterval(changeColor, 1200);
