@@ -3,9 +3,9 @@
   font-family: "iconfont"; /* Project id 3794034 */
   /* Color fonts */
   src: 
-       url('//at.alicdn.com/t/c/font_3794034_bbuom51jw7g.woff2?t=1669723427207') format('woff2'),
-       url('//at.alicdn.com/t/c/font_3794034_bbuom51jw7g.woff?t=1669723427207') format('woff'),
-       url('//at.alicdn.com/t/c/font_3794034_bbuom51jw7g.ttf?t=1669723427207') format('truetype');
+       url('//at.alicdn.com/t/c/font_3794034_t07y0aqp1m.woff2?t=1669724465843') format('woff2'),
+       url('//at.alicdn.com/t/c/font_3794034_t07y0aqp1m.woff?t=1669724465843') format('woff'),
+       url('//at.alicdn.com/t/c/font_3794034_t07y0aqp1m.ttf?t=1669724465843') format('truetype');
 }
 
 .iconfont {
@@ -32,16 +32,12 @@
   content: "\e8d5";
 }
 
-.icon-shouye:before {
-  content: "\e7be";
-}
-
 .icon-fenlei1:before {
   content: "\e607";
 }
 
-.icon-shouye1:before {
-  content: "\100a6";
+.icon-shouye11:before {
+  content: "\100a7";
 }
 
 .icon-pinglun:before {
@@ -155,5 +151,6 @@
 .icon-qq:before {
   content: "\e60d";
 }
+
 
 
