@@ -3,9 +3,9 @@
   font-family: "iconfont"; /* Project id 3794034 */
   /* Color fonts */
   src: 
-       url('//at.alicdn.com/t/c/font_3794034_lx5tic9ypm.woff2?t=1669539588242') format('woff2'),
-       url('//at.alicdn.com/t/c/font_3794034_lx5tic9ypm.woff?t=1669539588242') format('woff'),
-       url('//at.alicdn.com/t/c/font_3794034_lx5tic9ypm.ttf?t=1669539588242') format('truetype');
+       url('//at.alicdn.com/t/c/font_3794034_bbuom51jw7g.woff2?t=1669723427207') format('woff2'),
+       url('//at.alicdn.com/t/c/font_3794034_bbuom51jw7g.woff?t=1669723427207') format('woff'),
+       url('//at.alicdn.com/t/c/font_3794034_bbuom51jw7g.ttf?t=1669723427207') format('truetype');
 }
 
 .iconfont {
@@ -16,12 +16,36 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-pinglun:before {
-  content: "\e632";
+.icon-guest-list:before {
+  content: "\e920";
 }
 
-.icon-pinglun1:before {
-  content: "\e613";
+.icon-guanyuwomen:before {
+  content: "\e63e";
+}
+
+.icon-liuyan:before {
+  content: "\e680";
+}
+
+.icon-timeline:before {
+  content: "\e8d5";
+}
+
+.icon-shouye:before {
+  content: "\e7be";
+}
+
+.icon-fenlei1:before {
+  content: "\e607";
+}
+
+.icon-shouye1:before {
+  content: "\100a6";
+}
+
+.icon-pinglun:before {
+  content: "\e632";
 }
 
 .icon-a-22:before {
@@ -38,14 +62,6 @@
 
 .icon-liulan:before {
   content: "\e612";
-}
-
-.icon-shuliangtongji:before {
-  content: "\e668";
-}
-
-.icon-rili2:before {
-  content: "\e71e";
 }
 
 .icon-0jianchajieguotongji:before {
@@ -66,26 +82,6 @@
 
 .icon-gitee:before {
   content: "\e611";
-}
-
-.icon-yaoqinghaoyou:before {
-  content: "\ffde";
-}
-
-.icon-daohangfenlei:before {
-  content: "\e61b";
-}
-
-.icon-liebiao:before {
-  content: "\e61c";
-}
-
-.icon-shouyeshouye:before {
-  content: "\e622";
-}
-
-.icon-shijianzhou:before {
-  content: "\e67a";
 }
 
 .icon-dianying:before {
@@ -124,10 +120,6 @@
   content: "\e644";
 }
 
-.icon-biaoqian1:before {
-  content: "\e62c";
-}
-
 .icon-weixin:before {
   content: "\e637";
 }
@@ -160,21 +152,8 @@
   content: "\e642";
 }
 
-.icon-fenlei:before {
-  content: "\5c";
-}
-
 .icon-qq:before {
   content: "\e60d";
 }
-
-.icon-mendiangonggao:before {
-  content: "\e76f";
-}
-
-.icon-shijianzhou1:before {
-  content: "\e61e";
-}
-
 
 
