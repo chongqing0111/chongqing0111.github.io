@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>b言b语</title>
+    <!-- <link rel="shortcut icon" href="./favicon.ico" /> -->
+    <link type="text/css" rel="stylesheet" href="https://at.alicdn.com/t/font_1755564_z4mhxbw13mq.css"></link>
+    <link href="https://fonts.loli.net/css?family=Noto+Serif+SC:200,300,900&display=swap&subset=chinese-simplified" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="description" content="">
+    <meta name="keywords" content="" />
+    <meta name="author" content="daibor" />
+    <meta charset="utf-8" />
+    <meta name="robots" content="index,follow" />
+    <meta name="google" content="index,follow" />
+    <meta name="googlebot" content="index,follow" />
+    <meta name="verify" content="index,follow" />
+    <meta name="apple-mobile-web-app-title" content="b言b语">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+</head>
+<style type="text/css">
+    @media (prefers-color-scheme: dark) {
+        /* 夜间模式 */
+        body {
+            background-color: black;
+            color: white;
+        }
+        body .item {
+            border-top: 6px solid #888888;
+            background-color: rgb(21, 32, 43);
+            color: #ccc;
+        }
+        body time {
+            color: #aaa;
+        }
+        h1 {
+            color: #ffffff;
+        }
+        aside {
+            color: #ccc;
+        }
+        body .load-btn {
+            background-color: #000;
+            color: #ddd;
+        }
+        body .load-btn:hover:active {
+            background: #1DA1F2;
+            color: #fff;
+        }
+    }
+    
+    [v-cloak] {
+        display: none;
+    }
+    
+
+    
+    pre {
+        white-space: pre-wrap;
+    }
+
+    body,
+    button {
+        background: #f6f5f4;
+        font-family: "Microsoft YaHei UI";
+    }
+    
+    aside {
+        font-weight: 300;
+        font-style: normal;
+        line-height: 1.8rem;
+    }
+    
+    #app,
+    header,
+    footer {
+        box-sizing: border-box;
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    
+    h1 {
+        font-weight: 900;
+    }
+    
+    footer {
+        font-size: 0.8rem;
+        clear: both;
+    }
+    
+    .tip {
+        color: #999;
+    }
+    
+    .item {
+        font-weight: 300;
+        font-style: normal;
+        background: #fff;
+        padding: 5px 20px;
+        border-radius: 8px;
+        box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+        margin-top: 10px;
+        text-align: justify;
+        font-size:17px;
+        font-family: -apple-system,BlinkMacSystemFont,PingFang SC,Noto Sans,Noto Sans CJK SC,Microsoft YaHei UI,Microsoft YaHei,WenQuanYi Micro Hei,sans-serif,Segoe UI,Roboto,Helvetica Neue,Arial,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji"
+    }
+    
+    .item a {
+        text-decoration: none;
+        color: #5dafd5;
+    }
+    
+    time {
+        font-weight: 200;
+        font-size:14px;
+        color: #bbb;
+    }
+    .tag {
+        font-size:14px;
+        color: #5783f7; ;
+        margin-left:5px;
+        padding:2px 3px;
+        background: #eef3fe;
+        border-radius: 3px;
+        font-family: "Microsoft YaHei UI";
+    }
+    .content {
+        font-family: "Microsoft YaHei UI";
+    }
+        
+    .center-text {
+        text-align: center;
+    }
+    
+    .load-ctn {
+        width: 100%;
+    }
+    
+    .load-btn {
+        border: 2px solid  #5783f7;
+        width: 130px;
+        outline: none;
+        font-size: 20px;
+        border-radius: 100px;
+        margin: 20px auto;
+        color: #000000;
+        line-height: 30px;
+        float: right;
+        background: #fff;
+    }
+    
+    .load-btn:hover:active {
+        background: #666;
+        color: #fff;
+    }
+</style>
+<body>
+    <header id="header">
+                  
+        <h1><img src="https://fastly.jsdelivr.net/gh/chongqing0111/picgo/images/202212030358631.webp" width="20%"/>说说</h1>
+    </header>
+    <main id="app">
+        <aside>
+            <p id="describe">
+                弱冠之年 加冠之任
+            </p>
+        </aside>
+        <p class="tip">现在总共 talk 了 {{count}} 条</p>
+        <section class="item" v-for="item in contents" v-cloak>
+            <time v-bind:datetime="item.attributes.time">{{item.attributes.time}} &nbsp;&nbsp;@chongqing0111</time>
+          <p><span class="tag">#生活</span><span class="tag">#memos</span></p>
+            <p class="content" v-html='item.attributes.content'></p>
+        </section>
+        <div class="load-ctn">
+            <button class="load-btn" v-on:click="loadMore" v-if="contents" v-cloak>再翻翻</button>
+            <p class="tip" v-else>别急，加载呢</p>
+        </div>
+    </main>
+
+</body>
+<script src="https://cdn.bootcss.com/vue/2.6.11/vue.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage@4.5.3/dist/av-min.js"></script>
+<script type="text/javascript">
+    var {
+        Query
+    } = AV;
+    AV.init({
+        appId: "RAMqSoi3zo4qJTr7ekf4Ezu0-MdYXbMMI", //你的 leancloud 应用 id （设置-应用keys-AppID）
+        appKey: "5cWJtaLyDBoqOi5GLgtfEyUK", //你的 leancloud 应用 AppKey （设置-应用keys-AppKey）
+    });
+
+    var query = new AV.Query('content');
+
+    var app = new Vue({
+        el: '#app',
+        data: {
+            page: 0,
+            count: 0,
+            contents: []
+        },
+        methods: {
+            loadMore: function(event) {
+                getData(++this.page);
+            }
+        }
+    })
+
+    function urlToLink(str) {
+        var re = /(http|ftp|https):\/\/[\w-]+(.[\w-]+)+([\w-.,@?^=%&:/~+#]*[\w-\@?^=%&/~+#])?/g;;
+
+        str = str.replace(re, function(website) {
+            return "<a href='" + website + "' target='_blank'> <i class='iconfont icon-lianjie-copy'></i>链接 </a>";
+        });
+        return str;
+    }
+
+    function getData(page = 0) {
+        query.descending('createdAt').skip(page * 20).limit(20).find().then(function(results) {
+            if (results.length == 0) {
+                alert('之前没 b 过了')
+            } else {
+                let resC = results;
+                reqData = false;
+                resC.forEach((i) => {
+                    let dateTmp = new Date(i.createdAt);
+                    i.attributes.time = `${dateTmp.getFullYear()}-${(dateTmp.getMonth() + 1) < 10 ? ('0' + (dateTmp.getMonth()+1)) : dateTmp.getMonth()+1}-${(dateTmp.getDate() + 1) < 10 ? ('0' + dateTmp.getDate()) : dateTmp.getDate()} ${(dateTmp.getHours() + 1) <= 10 ? ('0' + dateTmp.getHours()) : dateTmp.getHours()}:${(dateTmp.getMinutes() + 1) <= 10 ? ('0' + dateTmp.getMinutes()) : dateTmp.getMinutes()}`;
+                    i.attributes.content = "<pre>" + urlToLink(i.attributes.content) + "</pre>";
+                    app.contents.push(i);
+                })
+            }
+
+        }, function(error) {});
+    }
+
+    getData(0);
+
+    query.count().then(function(count) {
+        app.count = count;
+    }, function(error) {});
+</script>
+
+</html>

@@ -282,3 +282,178 @@ h6::before {
   text-shadow: 0 0 2px var(--theme-color) !important;
 }
 /* 深夜霓虹灯end */
+
+
+/*文章相关推荐卡片美化*/
+.relatedPosts > .relatedPosts-list > div {
+  border-radius: 20px;
+}
+
+/*文章分页卡片美化*/
+#pagination .prev-post a, #pagination .next-post a {
+  border-style: ridge;
+  border-width: 8px;
+  border-color: #d2d2d2;
+}
+
+/* 目录颜色圆角调整 */
+#aside-content #card-toc .toc-content .toc-link.active {
+  background: #669cbe;
+  border-radius: 5px;
+}
+
+/*文章页卡片宽幅占比*/
+.layout {
+  max-width: 1340px;
+}
+
+/*文章页卡片圆角*/
+.layout > div:first-child:not(.recent-posts) {
+  border-radius: 35px;
+}
+
+/*文章页目录卡片圆角*/
+#aside-content .card-widget {
+  border-radius: 20px;
+  }
+
+
+/*文章页信息栏美化*/
+#post-info .post-title {
+  font-weight: 600; /*字体粗细*/
+  font-size: 2.5em; /*字体大小*/
+  line-height: 2.2; /*元素高度*/
+  letter-spacing: 9px; /*字体间距*/
+}
+/*信息栏高度调整*/
+#page-header.post-bg {
+  height: 26rem;
+}
+/*Web端信息栏适配*/
+@media screen and (min-width: 421px){
+  #page-header #post-info {
+    bottom: 8rem;
+}
+}
+/*Wap端信息栏适配*/
+@media screen and (max-width: 420px){
+  #page-header #post-info {
+    bottom: 2rem;
+}
+}
+
+/*调宽页脚*/
+#footer-wrap {
+  padding: 3rem 2rem; /*前者为上下边距，后者为左右边距*/
+}
+
+
+/*顶栏美化*/
+#nav .site-page {
+  font-size: 0.79em; /*字体大小*/
+  letter-spacing: 3px; /*字体间距*/
+  font-weight: 500; /*字体粗细*/
+}
+#nav {
+  height: 70px; /*顶栏高度调整*/
+}
+#page-header.nav-fixed #nav {
+  top: -70px; /*顶栏调整空缺补齐*/
+}
+
+
+
+
+/* 文章目录无焦点装填模糊start */
+#aside-content #card-toc .toc-content {
+  margin: 10px -18px;
+}
+ #aside-content #card-toc .toc-content .toc-link.active {
+  line-height: 1.2;
+  border-radius: 12px;
+  border-left-color: var(--heo-hovertext);
+  background-color: var(--heo-card-bg);
+  color: var(--heo-lighttext);
+  font-weight: bold;
+  font-size: 20px;
+}
+[data-theme=dark].toc .toc-item.active .toc-link .toc-text {
+  color: var(--heo-white);
+}
+#aside-content #card-toc .toc-content .toc-item.active .toc-link {
+  opacity: 1;
+  border-radius: 8px;
+}
+#aside-content #card-toc .toc-content .toc-link {
+  line-height: 1.2;
+  padding: 8px;
+  border-left: 0px solid transparent;
+  border-radius: 12px;
+  color: var(--heo-secondtext);
+  cursor: default;
+}
+#aside-content #card-toc .toc-content .toc-link:not(.active) span {
+  opacity: 0.6;
+  cursor: pointer;
+  filter: blur(1px);
+  transition: 0.3s;
+}
+#aside-content #card-toc:hover .toc-content .toc-link:not(.active) span {
+  filter: blur(0px);
+  opacity: 1;
+}
+#aside-content #card-toc .toc-content .toc-link:not(.active) span:hover {
+  color: var(--heo-lighttext);
+}
+/* 文章目录无焦点装填模糊end */
+
+/*右下角按钮*/
+#rightside > div > button, #rightside > div > a {
+  display: block;
+  margin-bottom: 6px;
+  width: 40px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #f1f1f1;
+  color: #2d587a;
+  text-align: center;
+  font-size: 16px;
+  line-height: 40px;
+}
+
+
+/*评论背景*/
+#twikoo .tk-content {
+  background: rgb(213 213 213 / 60%);
+  padding: 7px 15px;
+  border-radius: 7px;
+}
+
+
+/*本地搜索美化*/
+.search-dialog .search-nav {
+  color: #000000;
+  font-size: 1.6em;
+  line-height: 2;
+}
+#local-search .search-dialog .local-search-box input {
+padding: 13px 21px;
+border: 3px solid #4182d9;
+border-radius: 11px;
+}
+hr {
+border: 3px dashed #4f80d8;
+}
+
+
+/*侧边栏标签美化*/
+#aside-content .card-tag-cloud a {
+  color: var(--heo-fontcolor) !important;
+  font-size: 0.8rem;
+  border-color: #49b1f5;
+  border-radius: 9px;
+  border-style: dotted;
+}
+#aside-content .item-headline {
+  font-weight: 700;
+}
