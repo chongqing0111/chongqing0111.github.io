@@ -506,7 +506,7 @@ h6::before {
 /* 文章目录无焦点装填模糊end */
 
 /*右下角按钮*/
-#rightside > div > button, #rightside > div > a {
+/* #rightside > div > button, #rightside > div > a {
   display: block;
   margin-bottom: 6px;
   width: 40px;
@@ -517,7 +517,7 @@ h6::before {
   text-align: center;
   font-size: 16px;
   line-height: 40px;
-}
+} */
 
 
 /*评论背景*/
@@ -571,3 +571,206 @@ border: 3px dashed #4f80d8;
   #web_bg ~ .page:has(.fcircle_page) {
     background-color: #f7f9fe !important;
   }
+  
+/* 设置手机端导航栏遮罩层样式 */
+[data-theme="light"] #sidebar-menus{
+    border-radius: 20px;
+    background-color:#dff1ed !important;
+  }
+[data-theme="dark"] #sidebar-menus{
+    border-radius: 20px;
+    }
+
+
+/* 切换背景页start */ 
+    .bgbox {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    
+    .pimgbox,
+    .imgbox,
+    .box {
+      width: 166px;
+      margin: 10px;
+      background-size: cover
+    }
+    
+    .pimgbox,
+    .imgbox {
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    
+    .pimgbox {
+      height: 240px;
+    }
+    
+    .imgbox {
+      height: 95px;
+    }
+    
+    .box {
+      height: 100px;
+    }
+    
+    #color {
+      border: none;
+      background: transparent;
+      width: 166px;
+      height: 110px;
+      margin: 5px 10px;
+      position: relative;
+      cursor: pointer;
+    }
+    
+    #color::before {
+      position: absolute;
+      color: rgb(255, 255, 255);
+      left: 38px;
+      top: 44px;
+      content: '自定义颜色';
+    }
+    @media screen and (min-width: 768px) {
+      /* 页面宽度 */
+      .page #content-inner {
+          max-width: 1200px !important;
+          padding: 40px 0;
+      }
+      /* 顶部导航 */
+      .menus_item>a>span {
+          /* padding-left: 8px; */
+      }
+      .menus_item>a {
+          border-radius: 8px;
+          padding: 12px 10px !important;
+          letter-spacing: 8px;
+          font-weight: bold
+      }
+      .menus_item>a i {
+          /* display: none; */
+      }
+      a#site-name {
+          font-size: 25px !important;
+          padding: 8.5px 12px !important;
+      }
+      /* 文章卡片 */
+      #recent-posts>.recent-post-item {
+          height: 14rem;
+      }
+    }
+    
+    @media screen and (max-width: 768px) {
+      /* 背景 */
+      .pimgbox,
+      .imgbox,
+      .box {
+          height: 73px;
+          width: 135px;
+      }
+      .pimgbox {
+          height: 205px;
+      }
+      #color {
+          width: 141px;
+          height: 83px;
+          margin: 7px;
+      }
+      #color::before {
+          left: 33px;
+          top: 33px;
+      }
+    }
+        /* 切换背景页end */
+    
+        #page h1.page-title {
+          margin: 8px 0 20px;
+      }
+      .page-title {
+          cursor: default;
+          text-align: center;
+      }
+
+
+      #page{
+        /* opacity:0.6 */
+      }
+      .fj-gallery-item img{
+        opacity: 1 !important;;
+        border-radius: 5px;
+        z-index: 999;
+      }
+
+
+      
+/* 标签tags魔改start */
+#aside-content .card-tag-cloud a {
+  border: 1px solid;
+  line-height: 1.5;
+  border-radius: 6px;
+  margin: 3px;
+  padding: 0 5px;
+}
+.tag-cloud-list a {
+  border: 1px solid;
+  line-height: 1.5;
+  border-radius: 6px;
+  padding: 5px 15px;
+  font-size: 1.2rem;
+  margin: 5px;
+}
+/* 标签tags魔改end */
+
+
+/* twikoo评论添加一个输入提醒start */
+/* 设置文字内容 :nth-child(1)的作用是选择第几个 */
+.el-input.el-input--small.el-input-group.el-input-group--prepend:nth-child(1):before {
+  content: '输入QQ号会自动获取昵称和头像🐧';
+}
+.el-input.el-input--small.el-input-group.el-input-group--prepend:nth-child(2):before {
+  content: '收到回复将会发送到您的邮箱📧';
+}
+.el-input.el-input--small.el-input-group.el-input-group--prepend:nth-child(3):before {
+  content: '可以通过昵称访问您的网站🔗';
+}
+/* 当用户点击输入框时显示 */
+.el-input.el-input--small.el-input-group.el-input-group--prepend:focus-within::before,
+.el-input.el-input--small.el-input-group.el-input-group--prepend:focus-within::after {
+  display: block;
+}
+/* 主内容区 */
+.el-input.el-input--small.el-input-group.el-input-group--prepend::before {
+  /* 先隐藏起来 */
+  display: none;
+  /* 绝对定位 */
+  position: absolute;
+  /* 向上移动60像素 */
+  top: -60px;
+  /* 文字强制不换行，防止left:50%导致的文字换行 */
+  white-space: nowrap;
+  /* 圆角 */
+  border-radius: 10px;
+  /* 距离左边50% */
+  left: 50%;
+  /* 然后再向左边挪动自身的一半，即可实现居中 */
+  transform: translate(-50%);
+  /* 填充 */
+  padding: 14px 18px;
+  background: #444;
+  color: #fff;
+}
+/* 小角标 */
+.el-input.el-input--small.el-input-group.el-input-group--prepend::after {
+  display: none;
+  content: '';
+  position: absolute;
+  /* 内容大小（宽高）为0且边框大小不为0的情况下，每一条边（4个边）都是一个三角形，组成一个正方形。
+  我们先将所有边框透明，再给其中的一条边添加颜色就可以实现小三角图标 */
+  border: 12px solid transparent;
+  border-top-color: #444;
+  left: 50%;
+  transform: translate(-50%, -48px);
+}
+/* twikoo评论添加一个输入提醒end */
+
