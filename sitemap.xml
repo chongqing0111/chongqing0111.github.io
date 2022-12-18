@@ -2,24 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.chongqing0111.top/wallpaper/pc/index.html</loc>
-    
-    <lastmod>2022-12-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.chongqing0111.top/wallpaper/ph/index.html</loc>
-    
-    <lastmod>2022-12-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://www.chongqing0111.top/link/index.html</loc>
     
     <lastmod>2022-12-18</lastmod>
@@ -83,7 +65,16 @@
   </url>
   
   <url>
-    <loc>https://www.chongqing0111.top/fcircle/index.html</loc>
+    <loc>https://www.chongqing0111.top/wallpaper/pc/index.html</loc>
+    
+    <lastmod>2022-12-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.chongqing0111.top/wallpaper/ph/index.html</loc>
     
     <lastmod>2022-12-18</lastmod>
     
@@ -246,6 +237,15 @@
   
   <url>
     <loc>https://www.chongqing0111.top/comments/index.html</loc>
+    
+    <lastmod>2022-12-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.chongqing0111.top/fcircle/index.html</loc>
     
     <lastmod>2022-12-18</lastmod>
     

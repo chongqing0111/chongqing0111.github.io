@@ -800,3 +800,23 @@ border: 3px dashed #4f80d8;
 .blog-slider__img img{
   border-radius: 10px !important;
 }
+
+/* 为了确保snackbar跟主题的一模一样，需要在自定义css里面写入以下内容： */
+/* 颜色设置 */
+[data-theme=light] {
+  --sianx_popup: #00c4b6;/* 白天 */
+}
+[data-theme=dark] {
+  --sianx_popup: #343434;/* 夜间 */
+}
+.snackbar-pos {
+border-radius: 5px !important;/* 弹窗圆角 */
+}
+.snackbar-container {
+  background: var(--sianx_popup) !important;/* 弹窗颜色 */
+}
+/* 字体设置，没有自定义字体的可忽略，这边只是提醒一下 */
+.snackbar-container {
+  font-family: 'aqqxs', sans-serif !important; /* snackbar弹窗 */
+}
+/* 为了确保snackbar跟主题的一模一样，需要在自定义css里面写入以上内容： */

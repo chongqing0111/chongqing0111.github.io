@@ -33,7 +33,14 @@ function changeBg (s, flag) {
   if (s.charAt(0) == '#') {
     bg.style.backgroundColor = s
     bg.style.backgroundImage = 'none'
-  } else bg.style.backgroundImage = s
+    console.log("测试");
+    Snackbar.show({ text: '已经切换背景！', backgroundColor: '#00c4b6', actionTextColor: '#ffffff', pos: 'top-right', duration: '2000' });
+
+  } else {
+    bg.style.backgroundImage = s
+    console.log("测试");
+    Snackbar.show({ text: '已经切换背景！', backgroundColor: '#00c4b6', actionTextColor: '#ffffff', pos: 'top-right', duration: '2000' });
+  }
   if (!flag) { saveData('blogbg', s) }
 }
 
