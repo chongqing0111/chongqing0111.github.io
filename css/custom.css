@@ -419,9 +419,9 @@ h6::before {
 /*文章页信息栏美化*/
 #post-info .post-title {
   font-weight: 600; /*字体粗细*/
-  font-size: 2.5em; /*字体大小*/
+  font-size: 2em; /*字体大小*/
   line-height: 2.2; /*元素高度*/
-  letter-spacing: 9px; /*字体间距*/
+  letter-spacing: 3px; /*字体间距*/
 }
 /*信息栏高度调整*/
 #page-header.post-bg {
@@ -572,10 +572,18 @@ border: 3px dashed #4f80d8;
     background-color: #f7f9fe !important;
   }
   
-/* 设置手机端导航栏遮罩层样式 */
+/* 设置手机端导航栏侧边栏遮罩层样式 */
 [data-theme="light"] #sidebar-menus{
     border-radius: 20px;
-    background-color:#dff1ed !important;
+    /* background-color:#dff1ed !important; */
+    background: linear-gradient(
+      -45deg,
+      #e8d8b9,
+      #eccec5,
+      #a3e9eb,
+      #bdbdf0,
+      #eec1ea
+    ) !important;
   }
 [data-theme="dark"] #sidebar-menus{
     border-radius: 20px;
@@ -785,4 +793,10 @@ border: 3px dashed #4f80d8;
 
 #recent-posts > .post-card-large >.recent-post-info > .content{
   -webkit-line-clamp: 5!important;
+}
+
+
+/* 首页轮播图推荐文章图片圆角 */
+.blog-slider__img img{
+  border-radius: 10px !important;
 }
