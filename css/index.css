@@ -263,6 +263,7 @@ hr:before,
   -ms-transition: filter 375ms ease-in 0.2s, -ms-transform 0.6s;
   transition: filter 375ms ease-in 0.2s, transform 0.6s;
   object-fit: cover;
+  border-radius: 8px;
 }
 .imgHover:hover,
 .error404 #error-wrap .error-content .error-img img:hover,
@@ -6118,6 +6119,7 @@ hr:before,
   -ms-transition: filter 375ms ease-in 0.2s, -ms-transform 0.6s;
   transition: filter 375ms ease-in 0.2s, transform 0.6s;
   object-fit: cover;
+  border-radius: 8px;
 }
 .imgHover:hover,
 .error404 #error-wrap .error-content .error-img img:hover,
